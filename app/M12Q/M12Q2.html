@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html>
+<head>
+<h1 align="center">Your Purchase Items</h1>
+<script>
+function checkform()
+{
+    var a1;
+    var a2;
+    var a3;
+
+    if (document.getElementById("1a").checked==true)
+    {
+        a1 = "One towel"
+    }
+ 
+    if (document.getElementById("2a").checked==true)
+    {
+        a1 = "Two towels"
+    }
+
+    if (document.getElementById("3a").checked==true)
+    {
+        a1 = "Three towels"
+    }
+
+    if (document.getElementById("1b").checked==true)
+    {
+        a2 = "One cup"
+    }
+
+    if (document.getElementById("2b").checked==true)
+    {
+        a2 = "Two cups"
+    }
+
+    if (document.getElementById("3b").checked==true)
+    {
+        a2 = "Three cups"
+    }
+
+    if (document.getElementById("1c").checked==true)
+    {
+        a3 = "One plate"
+    }
+
+    if (document.getElementById("2c").checked==true)
+    {
+        a3 = "Two plates"
+    }
+
+    if (document.getElementById("3c").checked==true)
+    {
+        a3 = "Three plates"
+    }
+
+    document.getElementById("textshow").innerHTML=a1;
+    document.getElementById("textshow1").innerHTML=a2;
+    document.getElementById("textshow2").innerHTML=a3;
+    return false;
+
+}
+
+
+</script>
+</head>
+<body>
+<br><br>
+
+<p style="text-align:center">
+<img src="towel.jpg" width="150" alt="Unknown">
+<img src="cup.jpg" width="150" alt="Unknown">
+<img src="plate.jpg" width="150" alt="Unknown">
+</p>
+<br><br>
+<center>
+<form action="post" onsubmit="return checkform()">
+<table border="1" width="400">
+<tr>
+<td>Quantity/Items:</td><td>Type of items</td>
+</tr>
+<tr>
+<td>Towel</td>
+<td>
+<input type="radio" id="1a" name="towel" value="1a">One
+<input type="radio" id="2a" name="towel" value="2a">Two
+<input type="radio" id="3a" name="towel" value="3a">Three
+</td>
+</tr>
+<tr>
+<td>Cup</td>
+<td>
+<input type="radio" id="1b" name="cup" value="1b">One
+<input type="radio" id="2b" name="cup" value="2b">Two
+<input type="radio" id="3b" name="cup" value="3b">Three
+</td>
+</tr>
+<tr>
+<td>Plate</td>
+<td>
+<input type="radio" id="1c" name="plate" value="1c">One
+<input type="radio" id="2c" name="plate" value="2c">Two
+<input type="radio" id="3c" name="plate" value="3c">Three
+</td>
+</tr>
+<tr>
+<td><input type="submit" value="Next"></td><td>Submit your purchase! Thank you</td>    
+</tr>
+</table>
+</form>
+
+<br><br>
+<table border="1" width="400">
+<tr>
+<td>List</td><td align="center">Your Items Purchase</td>    
+</tr>
+<tr>
+<td width="30%">Item 1:</td><td><div id="textshow"></div></td>
+</tr>
+<tr>
+<td width="30%">Item 2:</td><td><div id="textshow1"></div></td>
+</tr>
+<tr>
+<td width="30%">Item 3:</td><td><div id="textshow2"></div></td>
+</tr>
+
+
+
+
+</table>
+
+
+</center>
+
+    
+</body>
+</html>
