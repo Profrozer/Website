@@ -10,7 +10,7 @@ app = Flask(__name__)
 def hello_world():
     request_type_str = request.method
     if request_type_str == 'GET':
-        return render_template('index.html', href2='')
+        return render_template('M12Q1.html', href2='')
     else:
         myage = request.form['age']
         mygender = request.form['gender']
@@ -19,5 +19,5 @@ def hello_world():
         predictions = model.predict([np_arr])  
         predictions_to_str = str(predictions)
         #return predictions_to_str
-        return render_template('index.html', href2='The suitable bread for you (age:'+str(myage)+' ,gender:'+str(mygender)+') is:'+predictions_to_str)
+        return render_template('M12Q1.html', href2='The suitable bread for you (age:'+str(myage)+' ,gender:'+str(mygender)+') is:'+predictions_to_str)
 
